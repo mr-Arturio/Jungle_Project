@@ -23,28 +23,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
         <!-- Categories dropdown -->
-        <!--
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Categories
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+          <%# Categories %>
+          <%# </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown"> %>
             <% Category.all.each do |category| %>
-              <li class="nav-item">
-                <%= link_to category.name, category, class: "nav-link" %>
-              </li>
+            <li class="nav-item">
+              <%= link_to category.name, category, class: "nav-link" %>
+            </li>
             <% end %>
-          </ul>
-        </li>
-        -->
+          <%# </ul>
+        </li> %>
       </ul>
 
       <!-- About link -->
@@ -54,8 +44,9 @@
         </li>
       </ul>
 
+
+<!-- Admin dropdown -->
       <ul class="navbar-nav">
-        <!-- Admin dropdown -->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
@@ -83,7 +74,6 @@
         </li>
 
         <!-- Login/Signup or Logout link -->
-       
           <% if current_user %>
          
            <a class="nav-link" > Signed in as <%= current_user.first_name %> <a> <%= link_to "Logout", '/logout', class: "nav-link"  %>
